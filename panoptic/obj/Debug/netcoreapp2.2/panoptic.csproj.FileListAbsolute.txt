@@ -27,3 +27,4 @@ H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.Views.pdb
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.dll
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.pdb
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.csproj.CopyComplete
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.csprojAssemblyReference.cache
