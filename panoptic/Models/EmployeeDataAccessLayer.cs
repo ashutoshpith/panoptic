@@ -66,6 +66,21 @@ namespace panoptic.Models
 
         public void UpdateEmployee(Employee employee)
         {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spUpdateEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@EmpId", employee.ID);
+                cmd.Parameters.AddWithValue("@Name", employee.Name);
+                cmd.Parameters.AddWithValue("@Gender", employee.Gender);
+                cmd.Parameters.AddWithValue("@Department", employee.Department);
+                cmd.Parameters.AddWithValue("@City", employee.City);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
 
         }
     }
