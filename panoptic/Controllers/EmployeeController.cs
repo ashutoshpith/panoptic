@@ -37,5 +37,37 @@ namespace panoptic.Controllers
             }
             return View(employee);
         }
+
+        [HttpGet]
+        public IActionResult Edit(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            Employee employee = objemployee.GetEmployeeData(id);
+            if(employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(int id, [Bind] Employee employee)
+        {
+            if(id != employee.ID)
+            {
+                return NotFound();
+            }
+            if (ModelState.IsValid)
+            {
+                objemployee.UpdateEmployee(employee);
+                return RedirectToAction("Index");
+            }
+            return View(employee);
+        }
     }
 }
