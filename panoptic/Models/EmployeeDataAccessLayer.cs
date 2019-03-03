@@ -37,6 +37,36 @@ namespace panoptic.Models
 
             }
             return lstemployee;
+
+        }
+
+        //to add new record
+        public void AddEmplyee(Employee employee)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spAddEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Name", employee.Name);
+                cmd.Parameters.AddWithValue("@Gender", employee.Gender);
+                cmd.Parameters.AddWithValue("@Department", employee.Department);
+                cmd.Parameters.AddWithValue("@City", employee.City);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+
+
+
+        //to update the record
+
+        public void UpdateEmployee(Employee employee)
+        {
+
         }
     }
 }
