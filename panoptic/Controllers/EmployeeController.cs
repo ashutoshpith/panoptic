@@ -19,5 +19,23 @@ namespace panoptic.Controllers
 
             return View(lstemployee);
         }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([Bind] Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                objemployee.AddEmplyee(employee);
+                return RedirectToAction("Index");
+            }
+            return View(employee);
+        }
     }
 }
