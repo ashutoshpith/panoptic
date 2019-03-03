@@ -69,5 +69,20 @@ namespace panoptic.Controllers
             }
             return View(employee);
         }
+
+        [HttpGet]
+        public IActionResult Details(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            Employee employee = objemployee.GetEmployeeData(id);
+            if(employee == null)
+            {
+                return NotFound();
+            }
+            return View(employee);
+        }
     }
 }
