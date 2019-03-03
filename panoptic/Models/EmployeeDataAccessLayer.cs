@@ -107,7 +107,23 @@ namespace panoptic.Models
             }
             return employee;
         }
+        //to delete record
 
+        public void DeleteEmployee(int? id)
+        {
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand("spDeleteEmployee", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@EmpId", id);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+        }
 
     }
 }
