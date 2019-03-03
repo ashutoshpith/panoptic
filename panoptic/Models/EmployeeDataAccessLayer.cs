@@ -9,7 +9,7 @@ namespace panoptic.Models
 {
     public class EmployeeDataAccessLayer
     {
-        string connectionString = "Data Source=ASHUTOSH;Integrated Security=True";
+        string connectionString = "Data Source=ashutosh;Initial Catalog=amxdp;Integrated Security=True";
         //to view all employees
         public IEnumerable<Employee> GetAllEmployees()
         {
