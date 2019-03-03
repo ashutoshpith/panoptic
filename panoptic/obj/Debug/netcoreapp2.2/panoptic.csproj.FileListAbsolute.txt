@@ -28,3 +28,8 @@ H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.dll
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.pdb
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.csproj.CopyComplete
 H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\panoptic.csprojAssemblyReference.cache
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Create.g.cshtml.cs
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Delete.g.cshtml.cs
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Details.g.cshtml.cs
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Edit.g.cshtml.cs
+H:\c-sharp\panoptic\panoptic\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.g.cshtml.cs
