@@ -83,5 +83,31 @@ namespace panoptic.Models
             }
 
         }
+        public Employee GetEmployeeData(int? id)
+        {
+            Employee employee = new Employee();
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                string sqlQuery = "select * from tblEmployee where EmployeeID = " + id;
+                SqlCommand cmd = new SqlCommand(sqlQuery, con);
+
+                con.Open();
+
+                SqlDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    employee.ID = Convert.ToInt32(rdr["EmployeeID"]);
+                    employee.Name = rdr["Name"].ToString();
+                    employee.Gender = rdr["Gender"].ToString();
+                    employee.Department = rdr["Department"].ToString();
+                    employee.City = rdr["City"].ToString();
+                }
+            }
+            return employee;
+        }
+
+
     }
 }
