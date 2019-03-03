@@ -12069,7 +12069,8 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "System.Data.SqlClient >= 4.6.0"
     ]
   },
   "packageFolders": {
@@ -12129,6 +12130,10 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "System.Data.SqlClient": {
+            "target": "Package",
+            "version": "[4.6.0, )"
           }
         },
         "imports": [
